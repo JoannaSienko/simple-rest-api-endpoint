@@ -1,13 +1,13 @@
 # Simple REST API endpoint
 
 
-###Requirements
+### Requirements
 - Java 11
 - Maven
 - Docker
 
 
-###How to run
+### How to run
 1. Clone the project
 2. Start MySql database using docker:<br>
  ``` docker run -p 3306:3306 --name my-sql-db -e MYSQL_ROOT_PASSWORD=abcabc -d mysql```
@@ -15,7 +15,7 @@
  ```mvn spring-boot:run```
 
 
-###How to test
+### How to test
 1. Check if there is no record at the beggining:<br>
 ```curl localhost:8080/demo/viewAll```
 2. Add new action:<br>
