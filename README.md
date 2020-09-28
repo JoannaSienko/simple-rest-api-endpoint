@@ -17,7 +17,7 @@
  ```mvn spring-boot:run```
 
 
-### How to test *
+### How to test
 1. Check if there is no record at the beggining:<br>
 ```curl localhost:8080/demo/viewAll```
 2. Add new action*:<br>
