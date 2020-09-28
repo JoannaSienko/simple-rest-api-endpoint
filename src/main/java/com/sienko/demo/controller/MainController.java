@@ -18,8 +18,7 @@ public class MainController {
     }
 
     @PostMapping(path = "/add")
-    public @ResponseBody
-    String addNewAction(@RequestBody ActionDTO actionDTO) {
+    public String addNewAction(@RequestBody ActionDTO actionDTO) {
         var action = new Action();
         action.setUserId(actionDTO.getUserId());
         action.setGameId(actionDTO.getGameId());
@@ -31,8 +30,7 @@ public class MainController {
     }
 
     @GetMapping(path = "/viewAll")
-    public @ResponseBody
-    Iterable<Action> getAllActions() {
+    public Iterable<Action> getAllActions() {
         return actionRepository.findAll();
     }
 }

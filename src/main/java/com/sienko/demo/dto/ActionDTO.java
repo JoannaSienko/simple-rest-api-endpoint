@@ -5,7 +5,7 @@ import lombok.Value;
 @Value
 public class ActionDTO {
 
-     int userId;
-     int gameId;
-     String actionDescription;
+    int userId;
+    int gameId;
+    String actionDescription;
 }
