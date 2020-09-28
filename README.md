@@ -20,9 +20,9 @@
 ### How to test
 1. Check if there is no record at the beggining:<br>
 ```curl localhost:8080/demo/viewAll```
-2. Add new action*:<br>
+2. Add new action:<br>
 ```curl localhost:8080/demo/add -X POST -H "Content-Type: application/json" -d "{\"userId\":1,\"gameId\":111,\"actionDescription\":\"auth\"}"```
-3. Add another action*:<br>
+3. Add another action:<br>
 ```curl localhost:8080/demo/add -X POST -H "Content-Type: application/json" -d "{\"userId\":1,\"gameId\":111,\"actionDescription\":\"spin\"}"```
 4. Check if records appear on the list:<br>
 ```curl localhost:8080/demo/viewAll```
