@@ -11,7 +11,9 @@
 1. Clone the project
 2. Start MySql database using docker:<br>
  ```docker run -p 3306:3306 --name my-sql-db -e MYSQL_ROOT_PASSWORD=abcabc -d mysql```
-3. Run the application:<br>
+3. Build the project:<br>
+  ```mvn install```
+4. Run the application:<br>
  ```mvn spring-boot:run```
 
 
