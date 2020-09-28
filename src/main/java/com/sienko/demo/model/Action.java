@@ -13,9 +13,7 @@ public class Action {
     private int id;
 
     private int userId;
-
     private int gameId;
-
     private String actionDescription;
 
     public void setId(int id) {

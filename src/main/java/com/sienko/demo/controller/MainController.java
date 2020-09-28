@@ -1,5 +1,6 @@
 package com.sienko.demo.controller;
 
+import com.sienko.demo.dto.ActionDTO;
 import com.sienko.demo.model.Action;
 import com.sienko.demo.repository.ActionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,13 +20,11 @@ public class MainController {
 
     @PostMapping(path = "/add")
     public @ResponseBody
-    String addNewAction(@RequestParam int userId,
-                        @RequestParam int gameId,
-                        @RequestParam String actionDescription) {
+    String addNewAction(@RequestBody ActionDTO actionDTO) {
         var action = new Action();
-        action.setUserId(userId);
-        action.setGameId(gameId);
-        action.setActionDescription(actionDescription);
+        action.setUserId(actionDTO.getUserId());
+        action.setGameId(actionDTO.getGameId());
+        action.setActionDescription(actionDTO.getActionDescription());
 
         actionRepository.save(action);
 
