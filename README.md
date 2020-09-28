@@ -21,9 +21,9 @@
 1. Check if there is no record at the beggining:<br>
 ```curl localhost:8080/demo/viewAll```
 2. Add new action*:<br>
-```curl localhost:8080/demo/add -X POST -H "Content-Type: application/json" -d "{"userId":1,"gameId":111,"actionDescription":"auth"}"```
+```curl localhost:8080/demo/add -X POST -H "Content-Type: application/json" -d "{\"userId\":1,\"gameId\":111,\"actionDescription\":\"auth\"}"```
 3. Add another action*:<br>
-```curl localhost:8080/demo/add -X POST -H "Content-Type: application/json" -d "{"userId":1,"gameId":111,"actionDescription":"spin"}"```
+```curl localhost:8080/demo/add -X POST -H "Content-Type: application/json" -d "{\"userId\":1,\"gameId\":111,\"actionDescription\":\"spin\"}"```
 4. Check if records appear on the list:<br>
 ```curl localhost:8080/demo/viewAll```
 5. If you want to check the database, start mysql client (password: abcabc):<br>
@@ -32,8 +32,6 @@ and then:<br>
 ```use mysql;```<br>
 ```select * from action;```
 
-*when using Windows cmd line, escape ```"``` by ```\ ``` in json part of curl, e.g.:<br>
-```curl localhost:8080/demo/add -X POST -H "Content-Type: application/json" -d "{\"userId\":1,\"gameId\":111,\"actionDescription\":\"auth\"}"```
 
 ### Tutorials used:
 1. https://spring.io/guides/gs/accessing-data-mysql/#initial
